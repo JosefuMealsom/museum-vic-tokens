@@ -1,5 +1,4 @@
 const socket = io();
-const codeDictionary = {};
 
 socket.on("connect", () => {
     console.log("connected!", socket.id);
