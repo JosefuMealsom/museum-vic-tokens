@@ -1,0 +1,34 @@
+[
+    {
+        "id": "circle", 
+        "title": "Save the penguins", 
+        "description": "Welcome to the Penguin Preservation Alliance, where our passion for penguins drives everything we do. Nestled in the heart of coastal conservation efforts, we are dedicated to safeguarding the world's beloved flightless birds through research, rescue missions, and habitat protection. <br /> <br /> Founded on the belief that every penguin species deserves a sustainable future, our organization collaborates with scientists, environmentalists, and local communities to mitigate threats such as climate change, habitat loss, and pollution. Through rigorous field studies and innovative conservation projects, we strive to understand penguin behavior, monitor their populations, and advocate for policies that promote their well-being.", 
+        "heroImage": "penguins.jpg",
+        "url": "/penguins",
+        "externalId": 0
+    },
+    {
+        "id": "triangle", 
+        "title": "Help reflower nature", 
+        "description": "Join us in our efforts to enhance local biodiversity and support pollinator populations through our flower planting initiative. We focus on planting native wildflowers that thrive in our ecosystem, providing essential habitats for bees, butterflies, and other wildlife.<br /> <br /> By participating, you'll contribute directly to creating sustainable landscapes that benefit our environment and community. Whether you're new to gardening or an experienced enthusiast, there's a place for you in our conservation group. Contact us to learn more about how you can get involved and make a positive impact on our natural world.", 
+        "heroImage": "flowers.jpg",
+        "url": "/flowers",
+        "externalId": 1
+    },
+    {
+        "id": "square", 
+        "title": "Protect the sea slugs", 
+        "description": "Join us in our efforts to enhance local biodiversity and support pollinator populations through our flower planting initiative. We focus on planting native wildflowers that thrive in our ecosystem, providing essential habitats for bees, butterflies, and other wildlife.<br /> <br /> By participating, you'll contribute directly to creating sustainable landscapes that benefit our environment and community. Whether you're new to gardening or an experienced enthusiast, there's a place for you in our conservation group. Contact us to learn more about how you can get involved and make a positive impact on our natural world.", 
+        "heroImage": "slug.jpg",
+        "url": "/save-the-sea-slugs",
+        "externalId": 2
+    },
+    {
+        "id": "thin-rectangle", 
+        "title": "Help Tane Mahuta!", 
+        "description": "In the heart of New Zealand's ancient forests stands Tāne Mahuta, the mighty kauri tree revered as a symbol of resilience and natural heritage. A dedicated conservation group has taken on the sacred duty of protecting Tāne Mahuta and its surrounding ecosystem. Their mission spans stewardship, advocacy, and scientific research to safeguard not just a tree, but an entire ecosystem that supports unique flora and fauna found only in these ancient forests. At the forefront of their efforts is habitat restoration, ensuring the delicate balance that sustains Tāne Mahuta remains intact. Through partnerships with local communities and indigenous Māori tribes, the group promotes sustainable land management practices and educates visitors about the cultural and ecological significance of kauri trees.", 
+        "heroImage": "tane.jpg",
+        "url": "/help-tane",
+        "externalId": 3
+    }
+]
