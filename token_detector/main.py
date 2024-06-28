@@ -55,6 +55,10 @@ def filter_predictions(predictions, min_conf_level):
 
 
 def send_detections_over_websockets(predictions):
+    # For now, best to be running it all the time, so comment out
+    # the following code
+    # if len(predictions) == 0:
+    #     return
     sio.emit("tokens_detected:app", predictions)
 
 def render_boxes(frame, boxes):
