@@ -79,7 +79,7 @@ function App() {
 
   useEffect(() => {
     const updateQrCode = async () => {
-      const url = new URL(`https://m-prototypes.pages.dev/`);
+      const url = new URL("https://museum-vic-tokens.pages.dev");
 
       const ids = [];
       for (const t of tokenList) {
