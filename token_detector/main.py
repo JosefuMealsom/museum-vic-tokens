@@ -9,14 +9,15 @@ from statistics import mean
 sio = socketio.SimpleClient()
 sio.connect('ws://localhost:5000', transports=['websocket'])
 
-model = YOLO('best.pt')
+model = YOLO('best-sea-tokens.pt')
 model.to('cuda')
 
 model_classes = model.names
+print(model.names)
 
 video_stream = cv2.VideoCapture(0)
 
-rolling_averages = {"circle": [], "square": [], "thin-rectangle": [], "triangle" : []}
+rolling_averages = {"crab": [], "lobster": [], "octopus": [], "seahorse" : [], "turtle": []}
 
 def append_to_cached_predictions(class_name, prediction):
     max_cached_items = 15
@@ -27,7 +28,7 @@ def append_to_cached_predictions(class_name, prediction):
 
 
 def calculate_rolling_average(box_object):
-    current_predictions = {"circle" : 0, "square": 0, "thin-rectangle": 0, "triangle" : 0}
+    current_predictions = {"crab" : 0, "lobster": 0, "octopus": 0, "seahorse" : 0, "turtle": 0}
 
     class_indices_to_name = [model_classes[int(cls)] for cls in box_object.cls]
     predictions = [prediction.item() for prediction in box_object.conf]
