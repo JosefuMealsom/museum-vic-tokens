@@ -9,11 +9,10 @@ from statistics import mean
 sio = socketio.SimpleClient()
 sio.connect('ws://localhost:5000', transports=['websocket'])
 
-model = YOLO('best-sea-tokens.pt')
+model = YOLO('best-sea-tokens-v3.large.pt')
 model.to('cuda')
 
 model_classes = model.names
-print(model.names)
 
 video_stream = cv2.VideoCapture(0)
 
@@ -62,6 +61,8 @@ def send_detections_over_websockets(predictions):
     #     return
     sio.emit("tokens_detected:app", predictions)
 
+MIN_CONF = 0.7
+
 def render_boxes(frame, boxes):
     for box in boxes:
         x1, y1, x2, y2 = box.xyxy[0]
@@ -70,6 +71,9 @@ def render_boxes(frame, boxes):
         center = (int(x1 + (w / 2)), int(y1 + (h/2)))
         
         conf = math.ceil((box.conf[0]*100))/100
+
+        if(conf < MIN_CONF):
+            continue
 
         cls = box.cls[0]
         name = model_classes[int(cls)]
@@ -96,7 +100,7 @@ while True:
         averages = calculate_rolling_average(boxes)
         render_boxes(frame, boxes)
     
-    send_detections_over_websockets(filter_predictions(averages, 0.6))
+    send_detections_over_websockets(filter_predictions(averages, MIN_CONF))
     cv2.imshow("Image", frame)
     key = cv2.waitKey(1)
     if key == 27:
