@@ -17,7 +17,8 @@ function App() {
     return (
       <div className="flex w-full h-screen justify-center items-center">
         <p className="font-source-sans text-4xl font-bold">
-          Place your tokens in the tray generate your actions
+          Place your tokens under the token reader to scan, share and save your
+          actions
         </p>
       </div>
     );
@@ -29,8 +30,8 @@ function App() {
     return (
       <div className="flex justify-center flex-col items-center h-screen">
         <div className="mb-1">{renderQRCode()}</div>
-        <h4 className="text-lg mb-10 font-bold font-source-sans">
-          Scan me for your personal page!
+        <h4 className="text-2xl mb-10 font-bold font-source-sans">
+          Scan me for your personal actions
         </h4>
         <h1 className="font-source-sans text-2xl font-bold mb-4">
           Your scanned tokens
