@@ -17,8 +17,7 @@ function App() {
     return (
       <div className="flex w-full h-screen justify-center items-center">
         <p className="font-source-sans text-4xl font-bold">
-          Place your tokens under the token reader to scan, share and save your
-          actions
+          Place your tokens under the token reader to scan and save your actions
         </p>
       </div>
     );
